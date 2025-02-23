@@ -14,7 +14,7 @@ const sections = [
     content: "SHEIN's competitive edge lies in its relentless data collection and AI-driven insights. The brand monitors: User Engagement: Clicks, searches, and time spent on specific products guide future inventory decisions. Shopping Habits: SHEIN tracks what users add to their carts, wish lists, and purchase history to personalize recommendations. Social Media & Influencer Trends: The company actively scans TikTok, Instagram, and YouTube to spot emerging trends and replicate them within weeks. Heatmaps & A/B Testing: Through app and website heatmaps, SHEIN refines UI/UX, ensuring a frictionless shopping experience. This real-time tracking allows SHEIN to push targeted promotions, create personalized homepages, and even dictate which designs get manufactured - all maximizing conversion rates.",
   },
   {
-    title: "SHEIN's Expansion & U.S. Dominance",
+    title: "SHEIN's Expansion & U.S. Dominanc",
     content: "SHEIN has become one of the most downloaded shopping apps in the U.S., outperforming Amazon and traditional fashion brands like Zara and H&M. The company's strategy includes: Hyper-Personalization: AI-driven recommendations make every user's experience unique. Influencer & Social Commerce: Partnering with TikTok influencers and YouTubers drives massive engagement. Pop-Up Stores: Although SHEIN is digital-first, it experiments with pop-up stores in major U.S. cities to build brand affinity. Sustainability Claims: Facing criticism over fast fashion's environmental impact, SHEIN has started promoting 'recycled collections' and 'eco-friendly' initiatives, though skepticism remains.",
   },
   {
