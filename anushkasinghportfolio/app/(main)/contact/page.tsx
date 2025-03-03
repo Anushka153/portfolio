@@ -2,7 +2,31 @@ import React from 'react';
 import Image from 'next/image';
 // import ContactImage from "@/public/.png"; // Replace with an actual contact-related image
 
-const contactDetails = [
+type TextContent = {
+  type: "text";
+  text: string;
+};
+
+type ImageContent = {
+  type: "image";
+  src?: string; // Optional because it's commented out in your example
+  alt: string;
+};
+
+type FormContent = {
+  type: "form";
+};
+
+type ContactContent = TextContent | ImageContent | FormContent;
+
+type ContactSection = {
+  title: string;
+  content: ContactContent[];
+  bgColor: string;
+};
+
+
+const contactDetails: ContactSection[] = [
   {
     title: "Let's Connect",
     content: [
@@ -68,7 +92,7 @@ const ContactPage = () => {
                 <h2 className="section-title text-4xl font-bold mb-6 text-[#d07f33]">{section.title}</h2>
                 <div className="section-content text-lg leading-relaxed text-gray-900">
                   {section.content.map((contentItem, idx) => {
-                    if (contentItem.type === "text") {
+                    if (contentItem.type === "text" && !!contentItem.text) {
                       return <p key={idx} className="mb-4">{contentItem.text}</p>;
                     }
                     return null;

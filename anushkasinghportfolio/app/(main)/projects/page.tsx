@@ -7,7 +7,7 @@ export default function Projects() {
       <div className="relative min-h-screen bg-gradient-to-b from-[#fefee0] to-[#fdfeec] flex items-center justify-center">
     <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4">
         <ProjectTile image="/shein.png" projectHeadline="Shein" projectLink="/projects/shein" />
-        <ProjectTile projectHeadline="Splitwise" projectLink="/projects/splitwise" />
+        <ProjectTile image="/splitwise.png" projectHeadline="Splitwise" projectLink="/projects/splitwise" />
         {/* <ProjectTile projectHeadline="Jai Shree ram" projectLink="/projects/something" /> */}
         {/* <ProjectTile projectHeadline="Jai Shree Krishna" projectLink="/projects/jaishreekrishna" />
         <ProjectTile projectHeadline="Jai Shree ram" projectLink="/projects/jaishreeram" />

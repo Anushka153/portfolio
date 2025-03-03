@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ProfilePic from "@/public/myphoto.jpg"; // Replace with your actual profile image
 import SectionImage from "@/public/shein.png"; // Replace with actual section image
 
+
 const sections = [
   {
     title: "About Me",
@@ -52,7 +53,7 @@ const sections = [
       },
       {
         type: "image",
-        // src: SectionImage, // Replace with actual section image
+        src: '', // Replace with actual section image
         alt: "Section Image",
       }
     ],
@@ -75,7 +76,7 @@ const sections = [
       },
       {
         type: "image",
-        // src: SectionImage, // Replace with actual section image
+        src: '', // Replace with actual section image
         alt: "Section Image",
       }
     ],
@@ -98,7 +99,7 @@ const sections = [
       },
       {
         type: "image",
-        // src: SectionImage, // Replace with actual section image
+        src: '', // Replace with actual section image
         alt: "Section Image",
       }
     ],
@@ -121,7 +122,7 @@ const sections = [
       },
       {
         type: "image",
-        // src: SectionImage, // Replace with actual section image
+        src: '', // Replace with actual section image
         alt: "Section Image",
       }
     ],
@@ -151,7 +152,7 @@ const PersonalProfilePage = () => {
                 </h2>
                 <div className="section-content text-lg leading-relaxed text-gray-900">
                   {section.content.map((contentItem, idx) => {
-                    if (contentItem.type === "text") {
+                    if (contentItem.type === "text" && contentItem.text) {
                       return (
                         <p key={idx} className="mb-4">
                           {contentItem.text.split(' ').map((word, i) => {
@@ -177,11 +178,11 @@ const PersonalProfilePage = () => {
                   if (contentItem.type === "image") {
                     return (
                       <div key={idx} className="w-70 h-70 rounded-t-full">
-                        <Image
+                        {!!contentItem?.src && <Image
                           src={contentItem.src}
                           alt={contentItem.alt}
                           className="w-full h-full object-cover rounded-t-full"
-                        />
+                        />}
                       </div>
                     );
                   }
