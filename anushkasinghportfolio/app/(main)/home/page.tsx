@@ -34,7 +34,7 @@ export default function HomePage() {
             ensuring that every decision aligns with business goals and user needs.
           </p>
           <p className="text-lg max-w-3xl mx-auto leading-relaxed mt-4">
-            Whether it's optimizing existing products or launching something entirely new, I thrive in creating solutions that resonate.
+            Whether it`s optimizing existing products or launching something entirely new, I thrive in creating solutions that resonate.
             My ability to collaborate across cross-functional teams and adapt to dynamic challenges is what sets me apart in the tech landscape.
             Open to feedback and constantly evolving, I embrace new perspectives to drive impactful outcomes.
           </p>
