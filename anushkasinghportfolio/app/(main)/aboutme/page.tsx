@@ -57,7 +57,7 @@ const sections = [
         alt: "Section Image",
       }
     ],
-    bgColor: "bg-[#7a8a56]", // Muted green background
+    bgColor: "bg-[#9baf6e]", // Muted green background
   },
   {
     title: "Experience & Expertise",
@@ -83,29 +83,6 @@ const sections = [
     bgColor: "bg-[#d6d6a0]", // Soft yellow background
   },
   {
-    title: "Mentoring & Community Involvement",
-    content: [
-      {
-        type: "text",
-        text: "When I’m not busy building the future of tech, I’m mentoring the next wave of trailblazers."
-      },
-      {
-        type: "text",
-        text: "I’ve got a knack for helping aspiring tech professionals navigate their journey with a mix of tough love and real-world wisdom."
-      },
-      {
-        type: "text",
-        text: "I believe in giving back, empowering others to crush their goals, and building a community where everyone rises together."
-      },
-      {
-        type: "image",
-        src: '', // Replace with actual section image
-        alt: "Section Image",
-      }
-    ],
-    bgColor: "bg-[#7a8a56]", // Muted green background
-  },
-  {
     title: "Hobbies & Interests",
     content: [
       {
@@ -126,15 +103,15 @@ const sections = [
         alt: "Section Image",
       }
     ],
-    bgColor: "bg-[#d6d6a0]", // Soft yellow background
+    bgColor: "bg-[#9baf6e]", // Soft yellow background
   },
 ];
 
 const PersonalProfilePage = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-[#fefee0] to-[#fdfeec]">
+    <div className="relative min-h-screen bg-gradient-to-b  from-[#fefee0] to-[#fdfeec]">
       {/* Profile Picture Section */}
-      <div className="absolute top-0 left-0 right-0 h-[25vh] flex justify-center items-center bg-[#7a8a56] text-white">
+      <div className="absolute top-0 left-0 right-0 h-[25vh] flex justify-center items-center bg-[#58653b] text-white">
       </div>
 
       {/* Main Content Section */}
@@ -147,7 +124,7 @@ const PersonalProfilePage = () => {
             <div className="flex flex-col sm:flex-row justify-between items-center gap-12 sm:gap-16">
               {/* Left Half for Text Content */}
               <div className="w-full sm:w-1/2 mb-6 sm:mb-0">
-                <h2 className="section-title text-4xl font-bold mb-6 text-[#d07f33]"> {/* Warm orange header */}
+                <h2 className="section-title text-4xl font-bold mb-6 text-[#b06d2e]"> {/* Warm orange header */}
                   {section.title}
                 </h2>
                 <div className="section-content text-lg leading-relaxed text-gray-900">

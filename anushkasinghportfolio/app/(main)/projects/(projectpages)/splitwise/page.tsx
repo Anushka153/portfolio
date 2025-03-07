@@ -1,136 +1,107 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+// Example React JSX structure
 import Image from "next/image";
+import React from "react";
+ import Shein from "@/public/splitwise.png"
 
 const sections = [
   {
     title: "Overview",
-    content: 
-      "Splitwise is a widely used expense-sharing application that allows users to split bills among friends, family, or roommates. This enhancement introduces an in-app Splitwise Wallet, enabling users to directly settle balances within the app, creating a seamless experience.",
-    image: "/images/overview.png",
-    alternateColor: true,  // Example of alternating color
+    content:
+      "Splitwise is a widely used expense-sharing application that allows users to split bills among friends, family, or roommates. The introduction of the Splitwise Wallet enables users to directly settle balances within the app, streamlining the payment process and offering a seamless user experience.",
+    isImage: true,
   },
   {
     title: "Objective",
     content: [
-      "Streamline expense settlements by enabling in-app transactions.",
-      "Enhance user convenience by combining expense tracking and payments.",
-      "Introduce new monetization opportunities via wallet transactions.",
+      "Streamline expense settlements by enabling in-app transactions, eliminating the need for external payment apps.",
+      "Enhance user convenience by combining expense tracking and payments into one platform.",
+      "Introduce new monetization opportunities by facilitating wallet transactions, driving revenue through wallet fees or in-app purchases.",
     ],
-    image: "/images/objective.png",
-    alternateColor: false,  // Alternating color as false for this section
+   
   },
   {
     title: "Success Metrics",
     content: [
-      "Percentage of users who create wallets.",
-      "Transaction volume.",
-      "User retention percentage.",
-      "Revenue generated.",
+      "Percentage of users who activate and use the Splitwise Wallet feature.",
+      "Transaction volume, tracking the total value of transactions made through the wallet.",
+      "User retention percentage, tracking the continued engagement with the wallet feature.",
+      "Revenue generated through wallet transactions, including fees and other monetization methods.",
     ],
-    image: "/images/success-metrics.png",
-    alternateColor: true,  // Alternating color set to true here
   },
   {
     title: "Pain Points",
     content: [
-      "Friction in settlements: Users currently have to use external payment apps, leading to drop-offs.",
-      "Delayed settlements: Users forget to settle balances, leading to unpaid debts.",
-      "Lack of financial insights: No clear view of past settlements and payment history within Splitwise.",
+      "Friction in settlements: Users currently need to use external payment apps, leading to user drop-offs and incomplete transactions.",
+      "Delayed settlements: Many users forget to settle their balances, leading to prolonged unpaid debts among friends, which could cause frustration.",
+      "Lack of financial insights: Users currently have no clear view of their past settlements and payment history within Splitwise, which affects transparency.",
     ],
-    image: "/images/pain-points.png",
-    alternateColor: false,
+   
   },
   {
     title: "User Flow",
     content: [
-      "Wallet Activation: User navigates to the wallet section and selects 'Activate Wallet.'",
-      "Completes KYC and links a bank account.",
-      "Adds money to the wallet.",
-      "Splitting & Settling Expenses: Users record an expense in a group or individual entry.",
-      "Users can choose to settle the amount via the wallet.",
-      "Recipient receives funds instantly in their Splitwise Wallet, with an option to withdraw to their bank account.",
+      "Wallet Activation: Users can easily activate the wallet by navigating to the wallet section and completing a simple 'Activate Wallet' process.",
+      "Account Linking: The user links a bank account via KYC (Know Your Customer) verification for security purposes.",
+      "Adding Money: Users can load money into the wallet using UPI or net banking methods.",
+      "Splitting & Settling Expenses: Users can record an expense, and instead of using external apps, they can choose to settle via their Splitwise Wallet.",
+      "Instant Transfer: The recipient immediately receives funds in their Splitwise Wallet, with an option to withdraw to a linked bank account.",
     ],
-    image: "/images/user-flow.png",
-    alternateColor: true,
   },
   {
     title: "Key UI Components",
     content: [
-      "Wallet Dashboard: Displays balance, recent transactions, and pending settlements.",
-      "Users can create a Splitwise Wallet by linking their bank account via UPI.",
-      "KYC verification required for regulatory compliance.",
-      "Users can load money into the wallet via UPI or net banking.",
-      "Settle Up Screen: Users can choose 'Splitwise Wallet' for instant payments.",
-      "Transaction History Page: View past settlements and expenses.",
-      "Security & Compliance: Multi-factor authentication and end-to-end encryption.",
+      "Wallet Dashboard: Shows the current balance, recent transactions, and pending settlements for a user-friendly experience.",
+      "Bank Linking: Users can link their bank accounts via UPI for easy wallet funding and withdrawals.",
+      "KYC Verification: Required to meet regulatory requirements and ensure the safety of transactions.",
+      "Loading Money: Users can add funds through UPI or net banking.",
+      "Settle Up Screen: A screen where users can select 'Splitwise Wallet' to settle expenses instantly with their group or individual expenses.",
+      "Transaction History: Shows past settlements, making it easy for users to track their spending and payments.",
+      "Security & Compliance: Includes multi-factor authentication and end-to-end encryption to protect user data and financial information.",
     ],
-    image: "/images/key-ui-components.png",
-    alternateColor: false,
+   
   },
   {
     title: "Challenges & Considerations",
     content: [
-      "Regulatory Compliance: Adhering to fintech regulations for digital wallets.",
-      "User Trust & Security: Ensuring seamless and fraud-free transactions.",
-      "Market Competition: Differentiating from established UPI and wallet providers.",
-      "Technical Scalability: Managing high transaction volumes efficiently.",
+      "Regulatory Compliance: The product must comply with digital wallet and fintech regulations to ensure safety and legal validity.",
+      "User Trust & Security: Ensuring secure transactions is paramount, especially in a space as sensitive as money transfer and financial data.",
+      "Market Competition: Differentiating from established payment providers, such as UPI and digital wallets like Paytm and PhonePe.",
+      "Technical Scalability: The platform needs to handle high transaction volumes efficiently as the user base and activity grow.",
     ],
-    image: "/images/challenges.png",
-    alternateColor: true,
   },
   {
     title: "Fail-Safe Mechanisms",
     content: [
-      "Transaction Reversals: In case of failed transactions, the amount is auto-reversed to the sender’s wallet.",
-      "Spending Limits: Initial transaction limits for new users to prevent misuse.",
+      "Transaction Reversals: In the event of failed or incomplete transactions, the system automatically reverses the amount to the sender’s wallet to prevent user loss.",
+      "Spending Limits: New users are subject to initial transaction limits, mitigating the risk of misuse or fraud during early interactions.",
     ],
-    image: "/images/fail-safe.png",
-    alternateColor: false,
+   
   },
   {
     title: "Design Flow",
     content: [
-      "Wallet Dashboard: Displays balance, recent transactions, and pending settlements.",
-      "Settle Up Screen: Users can choose 'Splitwise Wallet' for instant payments.",
-      "Transaction History Page: Filter by sent, received, and withdrawal transactions.",
+      "Wallet Dashboard: Central hub displaying wallet balance, recent transactions, and pending settlements.",
+      "Settle Up Screen: A simple, user-friendly interface for selecting wallet as a payment option for instant settlements.",
+      "Transaction History: A page showing detailed records of sent, received, and withdrawal transactions, allowing users to filter and track their financial activity.",
     ],
-    image: "/images/design-flow.png",
-    alternateColor: true,
   },
 ];
 
-
-const SplitwiseWalletPRD = () =>
-{
-  
+const SplitwiseWallet = () => {
   return (
-    <div className="w-full min-h-screen p-6 bg-[#f7f5d0] text-[#8f8803]">
-      <h1 className="text-3xl font-bold  text-[#8f8820] text-center">
-        Splitwise Wallet - Product Requirements Document
-      </h1>
-      
-      <div className="space-y-10">
-        {
-          sections.map( ( section, index ) =>
-          {
-            let color = 'blue';
-            if ( section.alternateColor )
-            {
-             color = '#f7f5d0'
-            }
-            else { color = '#8f8820'}
-            return (
-              <div
-                key={ index }
-                className={ `bg-[${color}] flex flex-col md:flex-row items-center gap-6 ${ index % 2 === 0 ? 'md:flex-row-reverse' : '' }` }
-              >
-                <div className="md:w-1/2 flex justify-center">
-                  <Image src={ section.image } alt={ section.title } width={ 400 } height={ 250 } className="rounded-lg shadow-lg" />
+    <div className="relative min-h-screen bg-gradient-to-b from-[#fefee0] to-[#fdfeec]">
+      <Image src={Shein} alt="Shein" className="mx-auto rounded-lg w-[700px] h-[350px] mb-8" />
+      <div className="relative pt-12 pb-12 px-8 sm:px-16 max-w-full mx-auto">
+        {sections.map((section, index) => (
+          <div key={index} className="mb-8">
+            <h2 className="section-title text-2xl font-bold text-[#b06d2e] mb-4">{section.title}</h2>
+            {!!section.image ? (
+              <div className="flex flex-wrap">
+                <div className="w-full md:w-1/2 p-4">
+                  <Image src={section.image} alt="Shein" className="mx-auto rounded-lg w-[500px] h-[350px] mb-8" />
                 </div>
-                <div className="md:w-1/2 p-4">
-                  <h2 className={ `text-xl font-semibold mb-2 text-${color}` }>{ section.title }</h2>
-                  { Array.isArray( section.content ) ? (
+                <div className="w-full md:w-1/2 p-4">
+                   { Array.isArray( section.content ) ? (
                     <ul className="list-disc pl-5">
                       { section.content.map( ( item, i ) => (
                         <li key={ i } className="hover:text-[color] transition-colors duration-200">{ item }</li>
@@ -141,11 +112,23 @@ const SplitwiseWalletPRD = () =>
                   ) }
                 </div>
               </div>
-            );
-          } )}
+            ) : (
+              Array.isArray( section.content ) ? (
+                    <ul className="list-disc pl-5">
+                      { section.content.map( ( item, i ) => (
+                        <li key={ i } className="hover:text-[color] transition-colors duration-200">{ item }</li>
+                      ) ) }
+                    </ul>
+                  ) : (
+                    <p>{ section.content }</p>
+                  ) 
+            ) }
+           
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default SplitwiseWalletPRD;
+export default SplitwiseWallet;     

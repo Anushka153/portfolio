@@ -13,7 +13,7 @@ export default function HomePage() {
       {/* Profile Image */}
       
       {/* Hero Section */}
-            <div className="flex flex-col items-center justify-center text-center py-20 px-6 bg-[#7a8a56] text-white">
+            <div className="flex flex-col items-center justify-center text-center py-20 px-6 bg-[#58653b] text-white">
                 <div className="flex justify-center py-12">
         <Image src={Myphoto} alt="Profile Picture" className="rounded-full w-48 h-48 object-cover shadow-lg" />
       </div>
