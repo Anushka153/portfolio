@@ -1,14 +1,13 @@
 // Example React JSX structure
 import Image from "next/image";
 import React from "react";
- import Shein from "@/public/splitwise.png"
+import Shein from "@/public/splitwise.png"
 
 const sections = [
   {
     title: "Overview",
     content:
       "Splitwise is a widely used expense-sharing application that allows users to split bills among friends, family, or roommates. The introduction of the Splitwise Wallet enables users to directly settle balances within the app, streamlining the payment process and offering a seamless user experience.",
-    isImage: true,
   },
   {
     title: "Objective",
@@ -95,25 +94,7 @@ const SplitwiseWallet = () => {
         {sections.map((section, index) => (
           <div key={index} className="mb-8">
             <h2 className="section-title text-2xl font-bold text-[#b06d2e] mb-4">{section.title}</h2>
-            {!!section.image ? (
-              <div className="flex flex-wrap">
-                <div className="w-full md:w-1/2 p-4">
-                  <Image src={section.image} alt="Shein" className="mx-auto rounded-lg w-[500px] h-[350px] mb-8" />
-                </div>
-                <div className="w-full md:w-1/2 p-4">
-                   { Array.isArray( section.content ) ? (
-                    <ul className="list-disc pl-5">
-                      { section.content.map( ( item, i ) => (
-                        <li key={ i } className="hover:text-[color] transition-colors duration-200">{ item }</li>
-                      ) ) }
-                    </ul>
-                  ) : (
-                    <p>{ section.content }</p>
-                  ) }
-                </div>
-              </div>
-            ) : (
-              Array.isArray( section.content ) ? (
+             { Array.isArray( section.content ) ? (
                     <ul className="list-disc pl-5">
                       { section.content.map( ( item, i ) => (
                         <li key={ i } className="hover:text-[color] transition-colors duration-200">{ item }</li>
@@ -122,8 +103,8 @@ const SplitwiseWallet = () => {
                   ) : (
                     <p>{ section.content }</p>
                   ) 
-            ) }
            
+           }
           </div>
         ))}
       </div>
@@ -132,3 +113,22 @@ const SplitwiseWallet = () => {
 };
 
 export default SplitwiseWallet;     
+
+//  {true ? (
+            //   <div className="flex flex-wrap">
+            //     {/* <div className="w-full md:w-1/2 p-4">
+            //       <Image src={section.image} alt="Shein" className="mx-auto rounded-lg w-[500px] h-[350px] mb-8" />
+            //     </div> */}
+            //     <div className="w-full md:w-1/2 p-4">
+            //        { Array.isArray( section.content ) ? (
+            //         <ul className="list-disc pl-5">
+            //           { section.content.map( ( item, i ) => (
+            //             <li key={ i } className="hover:text-[color] transition-colors duration-200">{ item }</li>
+            //           ) ) }
+            //         </ul>
+            //       ) : (
+            //         <p>{ section.content }</p>
+            //       ) }
+            //     </div>
+            //   </div>
+            // ) : (
